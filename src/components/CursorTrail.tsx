@@ -28,14 +28,12 @@ const CursorTrail: React.FC = () => {
     const handleMouseMove = (e: MouseEvent) => {
       mouseRef.current = { x: e.clientX, y: e.clientY };
       
-      // Add new trail point
       trailRef.current.unshift({
         x: e.clientX,
         y: e.clientY,
         opacity: 1
       });
 
-      // Limit trail length
       if (trailRef.current.length > 20) {
         trailRef.current.pop();
       }
@@ -44,7 +42,6 @@ const CursorTrail: React.FC = () => {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // Update and draw trail
       trailRef.current.forEach((point, index) => {
         point.opacity -= 0.05;
         
@@ -59,7 +56,6 @@ const CursorTrail: React.FC = () => {
         ctx.fill();
       });
 
-      // Remove faded points
       trailRef.current = trailRef.current.filter(point => point.opacity > 0);
       
       animationRef.current = requestAnimationFrame(animate);

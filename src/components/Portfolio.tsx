@@ -11,53 +11,125 @@ const Portfolio: React.FC = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with React and Node.js, featuring real-time inventory management and payment processing.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-      github: "#",
-      live: "#",
+      title: "aitui",
+      description: "Artificial Intelligence Terminal User Interface (AITUI) powered by local LLM's using Ollama.",
+      technologies: ["Python", "Ollama", "TUI"],
+      image: "screenshots/aitui.png",
+      github: "https://github.com/ItsZilla/aitui",
       status: "completed"
     },
     {
-      title: "AI-Powered Analytics Dashboard",
-      description: "Advanced analytics platform with machine learning insights, real-time data visualization, and predictive modeling.",
-      technologies: ["Python", "React", "TensorFlow", "D3.js"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
-      github: "#",
-      live: "#",
+      title: "itszilla.github.io",
+      description: "Personal portfolio website built with React, TypeScript, and Vite.",
+      technologies: ["TypeScript", "React", "Tailwind CSS", "Vite"],
+      image: "screenshots/portfolio.png",
+      github: "https://github.com/ItsZilla/itszilla.github.io",
       status: "completed"
     },
     {
-      title: "Mobile Fitness App",
-      description: "Cross-platform mobile application for fitness tracking with social features and personalized workout plans.",
-      technologies: ["React Native", "Firebase", "Redux", "Node.js"],
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop",
-      github: "#",
-      live: "#",
+      title: "ExtremeBiolink",
+      description: "The high-fidelity, gamified bio link platform. Move beyond static lists to immersive digital experiences.",
+      technologies: ["TypeScript", "React", "Next.js", "Framer Motion"],
+      image: "screenshots/extremebio.png",
+      github: "https://github.com/ItsZilla/ExtremeBiolink",
       status: "completed"
-    }
-  ];
-
-  const futureProjects = [
-    {
-      title: "AR Interior Designer",
-      description: "Augmented reality app for visualizing furniture and decor in real spaces using WebXR and Three.js.",
-      technologies: ["Three.js", "WebXR", "React", "AI"],
-      status: "planning"
     },
     {
-      title: "Blockchain Voting System",
-      description: "Secure, transparent voting platform built on Ethereum with smart contracts and zero-knowledge proofs.",
-      technologies: ["Solidity", "Web3.js", "React", "IPFS"],
-      status: "research"
+      title: "oip-operations",
+      description: "Full-stack monorepo for restaurant operations management, including POS, inventory, and online ordering.",
+      technologies: ["TypeScript", "Node.js", "React", "PostgreSQL"],
+      image: "screenshots/oip.png",
+      github: "https://github.com/ItsZilla/oip-operations",
+      status: "completed"
     },
     {
-      title: "Neural Network Composer",
-      description: "AI-powered music composition tool that generates melodies based on emotional input and musical theory.",
-      technologies: ["TensorFlow", "Web Audio API", "React", "Python"],
-      status: "concept"
-    }
+      title: "SkyCommand",
+      description: "Minecraft plugin that adds highly customizable commands and administrative tools.",
+      technologies: ["Kotlin", "Spigot API", "Minecraft"],
+      image: "screenshots/placeholder.png",
+      github: "https://github.com/ItsZilla/SkyCommand",
+      status: "completed"
+    },
+    {
+      title: "Covet",
+      description: "A wishlist web application to save and organize products you want to buy later.",
+      technologies: ["TypeScript", "React", "Supabase", "Web App"],
+      image: "screenshots/covet.png",
+      github: "https://github.com/ItsZilla/Covet",
+      status: "completed"
+    },
+    {
+      title: "SkyBackup",
+      description: "Automated Minecraft server backup system designed for reliability and ease of use.",
+      technologies: ["Python", "Automation", "Minecraft"],
+      image: "screenshots/placeholder.png",
+      github: "https://github.com/ItsZilla/SkyBackup",
+      status: "completed"
+    },
+    {
+      title: "SkyWarzone",
+      description: "Minecraft plugin adding Envoys, King of the Hill, and advanced warzone management.",
+      technologies: ["Kotlin", "Spigot API", "Minecraft"],
+      image: "screenshots/placeholder.png",
+      github: "https://github.com/ItsZilla/SkyWarzone",
+      status: "completed"
+    },
+    {
+      title: "SkyContainers",
+      description: "Minecraft plugin adding specialized hoppers, crop hoppers, and automated sell chests.",
+      technologies: ["Kotlin", "Spigot API", "Minecraft"],
+      image: "screenshots/placeholder.png",
+      github: "https://github.com/ItsZilla/SkyContainers",
+      status: "completed"
+    },
+    {
+      title: "f1-app",
+      description: "Formula 1 tracking application providing real-time data and race statistics.",
+      technologies: ["TypeScript", "React", "F1 API"],
+      image: "screenshots/f1app.png",
+      github: "https://github.com/ItsZilla/f1-app",
+      status: "completed"
+    },
+    {
+      title: "SkyUpdate",
+      description: "Python utility for automatically updating Minecraft server plugins across multiple instances.",
+      technologies: ["Python", "Automation", "Minecraft"],
+      image: "screenshots/placeholder.png",
+      github: "https://github.com/ItsZilla/SkyUpdate",
+      status: "completed"
+    },
+    {
+      title: "JudgeMyPost",
+      description: "Reddit scraper and automated video generator for social media content creation.",
+      technologies: ["Python", "Scraper", "Video Generation"],
+      image: "screenshots/placeholder.png",
+      github: "https://github.com/ItsZilla/JudgeMyPost",
+      status: "completed"
+    },
+    {
+      title: "SkyWaves",
+      description: "Minecraft plugin for chat-based interactions, including GG waves and giveaways.",
+      technologies: ["Kotlin", "Spigot API", "Minecraft"],
+      image: "screenshots/placeholder.png",
+      github: "https://github.com/ItsZilla/SkyWaves",
+      status: "completed"
+    },
+    {
+      title: "SkyKingdom",
+      description: "Custom Discord bot for the SkyKingdom community, featuring moderation and economy systems.",
+      technologies: ["JavaScript", "Discord.js", "Node.js"],
+      image: "screenshots/placeholder.png",
+      github: "https://github.com/ItsZilla/SkyKingdom",
+      status: "completed"
+    },
+    {
+      title: "SkySync",
+      description: "Minecraft plugin linking DiscordSRV with custom synchronization commands.",
+      technologies: ["Java", "Spigot API", "DiscordSRV"],
+      image: "screenshots/placeholder.png",
+      github: "https://github.com/ItsZilla/SkySync",
+      status: "completed"
+    },
   ];
 
   const textColor = isDark ? 'text-white' : 'text-black';
@@ -67,8 +139,8 @@ const Portfolio: React.FC = () => {
   const cardHover = isDark ? 'hover:bg-white/10' : 'hover:bg-black/10';
 
   return (
-    <section 
-      id="portfolio" 
+    <section
+      id="portfolio"
       ref={portfolioRef as React.RefObject<HTMLElement>}
       className="py-20 px-4 relative z-10 opacity-0 translate-y-8 transition-all duration-1000"
     >
@@ -82,25 +154,25 @@ const Portfolio: React.FC = () => {
             A showcase of projects that demonstrate my passion for creating innovative solutions
           </p>
         </div>
-        
+
         <div className="mb-16">
-          <h3 className={`text-2xl font-bold ${textColor} mb-8 text-center`}>Completed Projects</h3>
+          <h3 className={`text-2xl font-bold ${textColor} mb-8 text-center`}>Projects</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div 
+              <div
                 key={index}
                 className={`${cardBg} backdrop-blur-sm rounded-lg border ${cardBorder} overflow-hidden ${cardHover} transition-all duration-300 transform hover:scale-105 group`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className={`text-xl font-semibold ${textColor} mb-3`}>
                     {project.title}
@@ -108,10 +180,10 @@ const Portfolio: React.FC = () => {
                   <p className={`${subtitleColor} mb-4 text-sm leading-relaxed`}>
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech) => (
-                      <span 
+                      <span
                         key={tech}
                         className={`px-3 py-1 ${isDark ? 'bg-white/10 text-white' : 'bg-black/10 text-black'} rounded-full text-xs font-medium`}
                       >
@@ -119,9 +191,9 @@ const Portfolio: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className="flex space-x-4">
-                    <a 
+                    <a
                       href={project.github}
                       className={`gradient-border-button flex items-center space-x-2 px-4 py-2 ${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} transition-colors`}
                       style={{
@@ -130,64 +202,10 @@ const Portfolio: React.FC = () => {
                       }}
                     >
                       <Github className="w-4 h-4" />
-                      <span className="text-sm">Code</span>
-                    </a>
-                    <a 
-                      href={project.live}
-                      className={`gradient-border-button flex items-center space-x-2 px-4 py-2 ${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} transition-colors`}
-                      style={{
-                        background: isDark ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.8)',
-                        backdropFilter: 'blur(10px)'
-                      }}
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      <span className="text-sm">Live Demo</span>
+                      <span className="text-sm">Source Code</span>
                     </a>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <h3 className={`text-2xl font-bold ${textColor} mb-8 text-center`}>Future Projects</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {futureProjects.map((project, index) => (
-              <div 
-                key={index}
-                className={`${cardBg} backdrop-blur-sm rounded-lg border ${cardBorder} p-6 ${cardHover} transition-all duration-300 transform hover:scale-105 group relative overflow-hidden`}
-                style={{ animationDelay: `${(index + 3) * 0.1}s` }}
-              >
-                <div className="absolute top-4 right-4">
-                  {project.status === 'planning' && <Clock className="w-5 h-5 text-blue-400" />}
-                  {project.status === 'research' && <Lightbulb className="w-5 h-5 text-yellow-400" />}
-                  {project.status === 'concept' && <Lightbulb className="w-5 h-5 text-purple-400" />}
-                </div>
-                
-                <h3 className={`text-xl font-semibold ${textColor} mb-3 pr-8`}>
-                  {project.title}
-                </h3>
-                <p className={`${subtitleColor} mb-4 text-sm leading-relaxed`}>
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech) => (
-                    <span 
-                      key={tech}
-                      className={`px-3 py-1 ${isDark ? 'bg-white/10 text-white' : 'bg-black/10 text-black'} rounded-full text-xs font-medium border ${isDark ? 'border-white/20' : 'border-black/20'}`}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                
-                <div className={`text-xs ${subtitleColor} uppercase tracking-wide font-semibold`}>
-                  Status: {project.status}
-                </div>
-                
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               </div>
             ))}
           </div>

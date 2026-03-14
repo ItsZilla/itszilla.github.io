@@ -62,7 +62,7 @@ const About: React.FC = () => {
               also solve real-world problems.
             </p>
             <div className="flex flex-wrap gap-2 mt-8">
-              {['React', 'TypeScript', 'Node.js', 'Python', 'JavaScript', 'Kotlin',  'Java'].map((tech) => (
+              {['React', 'TypeScript', 'Node.js', 'Python', 'JavaScript', 'Kotlin', 'Java', 'Ollama', 'Spigot API', 'Tailwind CSS', 'Supabase', 'Next.js', 'Framer Motion', 'PostgreSQL', 'Discord.js', 'Networking'].map((tech) => (
                 <span 
                   key={tech}
                   className={`px-3 py-2 ${tagBg} ${textColor} rounded-full text-sm font-medium border ${tagBorder} hover:scale-105 transition-transform duration-200`}

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { MessageSquareDot, Github, Linkedin, Twitter, MapPin } from 'lucide-react';
+import { MessageSquareDot, Github, MapPin } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -12,22 +12,12 @@ const Contact: React.FC = () => {
   const socialLinks = [
     {
       icon: <Github className="w-6 h-6" />,
-      href: "https://github.com",
+      href: "https://github.com/itszilla",
       label: "GitHub"
     },
     {
-      icon: <Linkedin className="w-6 h-6" />,
-      href: "https://linkedin.com",
-      label: "LinkedIn"
-    },
-    {
-      icon: <Twitter className="w-6 h-6" />,
-      href: "https://twitter.com",
-      label: "Twitter"
-    },
-    {
       icon: <MessageSquareDot className="w-6 h-6" />,
-      href: "mailto:alexander@example.com",
+      href: "mailto:alex.martin@oipwv.net",
       label: "Email"
     }
   ];
@@ -72,7 +62,7 @@ const Contact: React.FC = () => {
                 <div className="flex items-center space-x-4">
                   <MessageSquareDot className={`w-5 h-5 ${subtitleColor}`} />
                   <a 
-                    href="mailto:alexander@example.com"
+                    href="mailto:alex.martin@oipwv.net"
                     className={`${subtitleColor} ${isDark ? 'hover:text-white' : 'hover:text-black'} transition-colors`}
                   >
                     Discord: ziilla.

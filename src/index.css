@@ -3,10 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -152,7 +148,6 @@ All colors MUST be HSL.
   animation: gradient-border 3s ease-in-out infinite;
 }
 
-/* Animated gradient border button */
 .gradient-border-button {
   position: relative;
   background: transparent;
@@ -188,17 +183,14 @@ All colors MUST be HSL.
   z-index: -1;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom cursor styles */
 * {
   cursor: none !important;
 }
 
-/* Hide default cursor on interactive elements */
 a, button, input, textarea, select {
   cursor: none !important;
 }

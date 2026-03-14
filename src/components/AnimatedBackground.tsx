@@ -61,7 +61,6 @@ const AnimatedBackground: React.FC = () => {
       const pointColor = isDark ? 'rgba(255, 255, 255, 0.4)' : 'rgba(0, 0, 0, 0.4)';
       const lineColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
       
-      // Draw connections
       ctx.strokeStyle = lineColor;
       ctx.lineWidth = 1;
       
@@ -81,7 +80,6 @@ const AnimatedBackground: React.FC = () => {
           }
         }
         
-        // Mouse interaction
         const mouseDx = pointsRef.current[i].x - mouseRef.current.x;
         const mouseDy = pointsRef.current[i].y - mouseRef.current.y;
         const mouseDistance = Math.sqrt(mouseDx * mouseDx + mouseDy * mouseDy);
@@ -96,7 +94,6 @@ const AnimatedBackground: React.FC = () => {
         }
       }
       
-      // Draw points
       ctx.fillStyle = pointColor;
       pointsRef.current.forEach(point => {
         ctx.beginPath();
@@ -107,7 +104,6 @@ const AnimatedBackground: React.FC = () => {
 
     const updatePoints = () => {
       pointsRef.current.forEach(point => {
-        // Mouse repulsion
         const mouseDx = point.x - mouseRef.current.x;
         const mouseDy = point.y - mouseRef.current.y;
         const mouseDistance = Math.sqrt(mouseDx * mouseDx + mouseDy * mouseDy);
@@ -117,7 +113,6 @@ const AnimatedBackground: React.FC = () => {
           point.vx += (mouseDx / mouseDistance) * force * 0.01;
           point.vy += (mouseDy / mouseDistance) * force * 0.01;
         } else {
-          // Return to base velocity when not interacting
           point.vx += (point.baseVx - point.vx) * 0.02;
           point.vy += (point.baseVy - point.vy) * 0.02;
         }
@@ -125,7 +120,6 @@ const AnimatedBackground: React.FC = () => {
         point.x += point.vx;
         point.y += point.vy;
         
-        // Bounce off edges
         if (point.x < 0 || point.x > canvas.width) {
           point.vx *= -1;
           point.baseVx *= -1;
