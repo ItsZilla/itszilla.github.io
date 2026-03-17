@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { ExternalLink, Github, Clock, Lightbulb } from 'lucide-react';
+import React, { useState } from 'react';
+import { ExternalLink, Github, Clock, Lightbulb, X } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -8,6 +8,7 @@ const Portfolio: React.FC = () => {
   const { theme } = useTheme();
   const portfolioRef = useScrollAnimation();
   const isDark = theme === 'dark';
+  const [lightboxImage, setLightboxImage] = useState<{ src: string; title: string } | null>(null);
 
   const projects = [
     {
@@ -32,6 +33,14 @@ const Portfolio: React.FC = () => {
       technologies: ["TypeScript", "React", "Next.js", "Framer Motion"],
       image: "screenshots/extremebio.png",
       github: "https://github.com/ItsZilla/ExtremeBiolink",
+      status: "completed"
+    },
+    {
+      title: "gaswatch",
+      description: "Serverless gas price change notifier",
+      technologies: ["TypeScript", "React", "Next.js", "Vercel"],
+      image: "screenshots/gaswatch.png",
+      github: "https://github.com/ItsZilla/gaswatch",
       status: "completed"
     },
     {
@@ -139,6 +148,7 @@ const Portfolio: React.FC = () => {
   const cardHover = isDark ? 'hover:bg-white/10' : 'hover:bg-black/10';
 
   return (
+    <>
     <section
       id="portfolio"
       ref={portfolioRef as React.RefObject<HTMLElement>}
@@ -164,13 +174,21 @@ const Portfolio: React.FC = () => {
                 className={`${cardBg} backdrop-blur-sm rounded-lg border ${cardBorder} overflow-hidden ${cardHover} transition-all duration-300 transform hover:scale-105 group`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="relative overflow-hidden">
+                <div
+                  className="relative overflow-hidden cursor-zoom-in"
+                  onClick={() => setLightboxImage({ src: project.image, title: project.title })}
+                >
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-black/50 rounded-full p-2">
+                      <ExternalLink className="w-5 h-5 text-white" />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="p-6">
@@ -212,6 +230,27 @@ const Portfolio: React.FC = () => {
         </div>
       </div>
     </section>
+
+    {lightboxImage && (
+      <div
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+        onClick={() => setLightboxImage(null)}
+      >
+        <button
+          className="fixed top-4 right-4 text-white bg-white/20 hover:bg-white/40 rounded-full p-2 transition-colors"
+          onClick={() => setLightboxImage(null)}
+        >
+          <X className="w-6 h-6" />
+        </button>
+        <img
+          src={lightboxImage.src}
+          alt={lightboxImage.title}
+          className="max-w-[85vw] max-h-[70vh] rounded-lg shadow-2xl object-contain"
+          onClick={(e) => e.stopPropagation()}
+        />
+      </div>
+    )}
+    </>
   );
 };
 
