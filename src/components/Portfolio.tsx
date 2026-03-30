@@ -68,6 +68,13 @@ const Portfolio: React.FC = () => {
       status: "completed"
     },
     {
+      title: "Gig Tracker",
+      description: "Web app to track gig economy earnings and expenses",
+      technologies: ["TypeScript", "React", "Next.js", "Vercel"],
+      github: "https://github.com/ItsZilla/gig-tracker",
+      status: "completed"
+    },
+    {
       title: "SkyBackup",
       description: "Automated Minecraft server backup system designed for reliability and ease of use.",
       technologies: ["Python", "Automation", "Minecraft"],
